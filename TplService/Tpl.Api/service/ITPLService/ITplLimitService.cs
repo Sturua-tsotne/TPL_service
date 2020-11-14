@@ -6,9 +6,9 @@ using Tpl.Api.Models.view_Models;
 
 namespace Tpl.Api.service.ITPLService
 {
-    interface ITplLimitService
+    public interface ITplLimitService
     {
-        public IEnumerable<TolLimitViewModel> TplGetLimit();
+        public List<TolLimitViewModel> TplGetLimit();
         public TolLimitViewModel TplGetLimit(int id);
         public bool TplSetLimit(TolLimitViewModel tpl);
         public bool TplEditLimit(TolLimitViewModel tpl);

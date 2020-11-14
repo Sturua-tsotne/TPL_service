@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tpl.Api.Models.Db_Models;
+using Tpl.Api.Models.view_Models.requestViewmodels;
 
 namespace Tpl.Api.Models
 {
@@ -27,14 +28,14 @@ namespace Tpl.Api.Models
             //modelBuilder.ApplyConfiguration(new TplConditionConfiguration());
         }
 
+      
 
-
-       
          public virtual DbSet<CarManufacturer> CarManufacturers { get; set; }
          public virtual DbSet<CarModel> CarModels { get; set; }
          public virtual DbSet<CarFeature> CarFeatures { get; set; }
          public virtual DbSet<PersonalInformation> PersonalInformations { get; set; }
-         public virtual DbSet<TplLimit> TplConditions { get; set; }
+         public virtual DbSet<TplLimit> TplLimits { get; set; }
+        public virtual DbSet<TplModel> TplModels { get; set; }
 
-    }
+    } 
 }

@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Tpl.Api.Models.Db_Models
 {
-    public class PersonalInformation
+    public partial class PersonalInformation
     {
+
+        public PersonalInformation()
+        {
+            TplModels = new HashSet<TplModel>();
+        }
         public int Id { get; set; }
         [Required]
-        [StringLength(50)]
+        public int TplModelId { get; set; }
+        [Required]
+        [StringLength(50)] 
         public string Name { get; set; }
         [Required]
         [StringLength(50)]
@@ -29,6 +36,8 @@ namespace Tpl.Api.Models.Db_Models
         [Required]
         [StringLength(50)]
         public string IdentityImg { get; set; }
+
+        public virtual ICollection<TplModel> TplModels { get; set; }
 
     }
 }

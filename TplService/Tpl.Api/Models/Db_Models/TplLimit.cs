@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tpl.Api.Models.Db_Models
 {
-    public class TplLimit
+    public partial class TplLimit
     {
         public int Id { get; set; }
         [Required]

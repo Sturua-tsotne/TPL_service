@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tpl.Api.Models.Db_Models
 {
-    public class CarModel
+    public partial class CarModel
     {
         public CarModel()
         {

@@ -9,8 +9,8 @@ namespace Tpl.Api.service.ITPLService
 {
    public interface ITplInfoService
     {
-        public IEnumerable<TplInfoRequestModel> TplGetInfo();
-        public TplInfoRequestModel TplGetInfo(int id);
+        public List<TplRequestModel> TplGetInfo();
+        public TplRequestModel TplGetInfo(int id);
         public bool TplSetInfo(TplInfoResponseModel Tpl);
         public bool TplEditInfo(TplInfoResponseModel Tpl);
         public bool TplChangeStatus(int id, bool status);

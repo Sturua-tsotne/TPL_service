@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Tpl.Api.Models.view_Models.requestViewmodels;
 using Tpl.Api.Models.view_Models.responseViewModel;
+using Tpl.Api.service.ITPLService;
 
 namespace Tpl.Api.Controllers
 {
@@ -13,43 +14,50 @@ namespace Tpl.Api.Controllers
     [ApiController]
     public class TplInfoController : ControllerBase
     {
+        private ITplInfoService _tplInfoService;
+        public TplInfoController(ITplInfoService tplInfoService)
+        {
+            _tplInfoService= tplInfoService;
+        }
+
+
         [HttpGet]
         [Route("TplGetInfo")]
-        public IEnumerable<TplInfoRequestModel> TplGetInfo()
+        public IEnumerable<TplRequestModel> TplGetInfo()
         {
-            return null;
+            return _tplInfoService.TplGetInfo();
         }
 
         [HttpGet]
         [Route("TplGetInfo/{id}")]
-        public TplInfoRequestModel  TplGetInfo(int id)
+        public TplRequestModel TplGetInfo(int id)
         {
-            return null;
+            return _tplInfoService.TplGetInfo(id);
         }
 
         [HttpPost("TplSetInfo")]
         public bool TplSetInfo(TplInfoResponseModel Tpl)
         {
-            return true;
+            return _tplInfoService.TplSetInfo(Tpl);
         }
         [HttpPost("TpEditInfo")]
         public bool TplEditInfo(TplInfoResponseModel Tpl)
         {
-            return true;
+            return _tplInfoService.TplEditInfo(Tpl);
         }
 
 
         [HttpPost("TplChangeStatus")]
         public bool TplChangeStatus(int id, bool status)
         {
-            return true;
+            return _tplInfoService.TplChangeStatus(id, status);
         }
 
         [HttpDelete]
         [Route("TplDeleteInfo/{id}")]
         public bool TplDeleteInfo(int id)
         {
-            return true;
+            return _tplInfoService.TplDeleteInfo(id);
         }
     }
 }

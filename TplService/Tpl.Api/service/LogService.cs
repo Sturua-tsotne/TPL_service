@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Tpl.Api.service.ITPLService;
 
-namespace Tpl.Api.service.TPLService
+namespace Tpl.Api.service
 {
     public class LogService : ILogService
     {

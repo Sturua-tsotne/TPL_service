@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace Tpl.Api.Models.Db_Models
 {
-    public class CarFeature
+    public partial class CarFeature
     {
+     
         public CarFeature()
         {
             CarModels= new HashSet<CarModel>();
+            TplModels = new HashSet<TplModel>();
         }
         public int Id { get; set; }
+        [Required]
+        public int TplModelId { get; set; }
         [Required]
         [StringLength(50)]
         public string RegistrationNumber { get; set; }
@@ -24,6 +28,6 @@ namespace Tpl.Api.Models.Db_Models
         public int CarModelId { get; set; }
 
         public virtual ICollection<CarModel> CarModels { get; set; }
-
+        public virtual ICollection<TplModel> TplModels { get; set; }
     }
 }

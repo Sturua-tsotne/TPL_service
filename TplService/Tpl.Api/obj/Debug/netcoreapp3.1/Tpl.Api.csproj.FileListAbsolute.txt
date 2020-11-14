@@ -66,3 +66,6 @@ C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\net
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.dll
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.pdb
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.genruntimeconfig.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll

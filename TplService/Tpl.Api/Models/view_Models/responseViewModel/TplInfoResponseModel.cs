@@ -15,9 +15,11 @@ namespace Tpl.Api.Models.view_Models.responseViewModel
         [Required]
         public bool Status { get; set; }
         [Required]
-        public int CarFeatureId { get; set; }
-        [Required]
         public int TplImitId { get; set; }
+
+        [Required]
+        public int CarFeatureId { get; set; }
+       
         public string RegistrationNumber { get; set; }
         [Required]
         [DataType(DataType.Date)]
@@ -25,6 +27,7 @@ namespace Tpl.Api.Models.view_Models.responseViewModel
         public DateTime ReleaseTime { get; set; }
         [Required]
         public int CarModelId { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
