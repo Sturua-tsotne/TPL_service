@@ -9,13 +9,12 @@ namespace Tpl.Api.Models.Db_Models
     public partial class TplLimit
     {
         public int Id { get; set; }
-        [Required]
-        [StringLength(50)]
         public string Limit { get; set; }
-        [Required]
-        [StringLength(50)]
         public string Bonus { get; set; }
+        public int TplModelId { get; set; }
 
-        
+        public virtual TplModel TplModel { get; set; }
+
+
     }
 }

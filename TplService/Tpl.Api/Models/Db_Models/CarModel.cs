@@ -8,18 +8,19 @@ namespace Tpl.Api.Models.Db_Models
 {
     public partial class CarModel
     {
-        public CarModel()
-        {
-            CarManufacturers = new HashSet<CarManufacturer>();
+       
+     
+            public CarModel()
+            {
+                CarManufacturerCarModels = new HashSet<CarManufacturerCarModel>();
+            }
+
+            public int Id { get; set; }
+            public string Model { get; set; }
+            public int CarManufacturerId { get; set; }
+            public int CarFeatureId { get; set; }
+
+            public virtual CarFeature CarFeature { get; set; }
+            public virtual ICollection<CarManufacturerCarModel> CarManufacturerCarModels { get; set; }
         }
-
-        public int Id { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string Model { get; set; }
-        [Required]
-        public int CarManufacturerId { get; set; }
-
-        public virtual ICollection<CarManufacturer> CarManufacturers  { get; set; }
-    }
 }

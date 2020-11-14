@@ -11,20 +11,18 @@ namespace Tpl.Api.Models.Db_Models
 
         public TplModel()
         {
-
-            TplImits = new HashSet<TplLimit>();
+            TplLimits = new HashSet<TplLimit>();
         }
 
-
         public int Id { get; set; }
-        [Required]
         public int ClientId { get; set; }
-        [Required]
         public bool Status { get; set; }
-       
-        [Required]
         public int TplImitId { get; set; }
+        public int CarFeatureId { get; set; }
+        public int PersonalInformationId { get; set; }
 
-        public virtual ICollection<TplLimit> TplImits { get; set; }
+        public virtual CarFeature CarFeature { get; set; }
+        public virtual PersonalInformation PersonalInformation { get; set; }
+        public virtual ICollection<TplLimit> TplLimits { get; set; }
     }
 }

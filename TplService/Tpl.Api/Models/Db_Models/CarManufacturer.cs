@@ -10,14 +10,12 @@ namespace Tpl.Api.Models.Db_Models
     {
         public CarManufacturer()
         {
-            CarModels = new HashSet<CarModel>();
+            CarManufacturerCarModels = new HashSet<CarManufacturerCarModel>();
         }
 
         public int Id { get; set; }
-        [Required]
-        [StringLength(50)]
         public string Manufacturer { get; set; }
 
-        public virtual ICollection<CarModel> CarModels { get; set; }
+        public virtual ICollection<CarManufacturerCarModel> CarManufacturerCarModels { get; set; }
     }
 }

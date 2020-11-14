@@ -8,23 +8,17 @@ namespace Tpl.Api.Models.Db_Models
 {
     public partial class CarFeature
     {
-     
+
         public CarFeature()
         {
-            CarModels= new HashSet<CarModel>();
+            CarModels = new HashSet<CarModel>();
             TplModels = new HashSet<TplModel>();
         }
+
         public int Id { get; set; }
-        [Required]
         public int TplModelId { get; set; }
-        [Required]
-        [StringLength(50)]
         public string RegistrationNumber { get; set; }
-        [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseTime { get; set; }
-        [Required]
         public int CarModelId { get; set; }
 
         public virtual ICollection<CarModel> CarModels { get; set; }

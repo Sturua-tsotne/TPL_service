@@ -13,28 +13,15 @@ namespace Tpl.Api.Models.Db_Models
         {
             TplModels = new HashSet<TplModel>();
         }
+
         public int Id { get; set; }
-        [Required]
         public int TplModelId { get; set; }
-        [Required]
-        [StringLength(50)] 
         public string Name { get; set; }
-        [Required]
-        [StringLength(50)]
         public string LastName { get; set; }
-        [Required]
-        [StringLength(11, MinimumLength = 11)]
         public string PersonalNumber { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DateBirth { get; set; }
-        [Required]
-        [StringLength(12)]
         public string MobileNumber { get; set; }
-        [StringLength(50)]
         public string Email { get; set; }
-        [Required]
-        [StringLength(50)]
         public string IdentityImg { get; set; }
 
         public virtual ICollection<TplModel> TplModels { get; set; }
