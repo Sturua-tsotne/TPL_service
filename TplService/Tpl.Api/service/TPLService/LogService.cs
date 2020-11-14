@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,8 +9,7 @@ namespace Tpl.Api.service.TPLService
 {
     public class LogService : ILogService
     {
-        public void LogError(Exception exception)
-        {
+      
             public void LogError(Exception exception)
             {
                 Log.Logger = new LoggerConfiguration()
@@ -20,6 +20,6 @@ namespace Tpl.Api.service.TPLService
                 Log.Information("Error Log ------------------------------------------------------------------------------ --" + DateTime.Now.ToString("yyyy - MM - dd HH:mm:ss"));
                 Log.Logger.Error(exception, exception.Message);
             }
-        }
+        
     }
 }

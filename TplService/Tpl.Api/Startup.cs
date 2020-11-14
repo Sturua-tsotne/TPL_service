@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tpl.Api.Models;
+using Tpl.Api.service.ITPLService;
+using Tpl.Api.service.TPLService;
 
 namespace Tpl.Api
 {
@@ -32,6 +34,14 @@ namespace Tpl.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
+
+
+
+            services.AddTransient<ILogService, LogService>();
+            services.AddTransient<ITplCarInfoService, TplCarInfoService>();
+            services.AddTransient<ITplInfoService, TplInfoService>();
+            services.AddTransient<ITplLimitService, TplLimitService>();
+
             services.AddControllers();
         }
 
