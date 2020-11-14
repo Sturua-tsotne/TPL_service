@@ -35,13 +35,13 @@ namespace TPL.identitySvr
             {
                 new Client
                 {
-                    ClientId="TplVueJsclient",
+                    ClientId="client",
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
                     ClientSecrets =
                     {
-                        new Secret("vue.js".Sha256())
+                        new Secret("secret".Sha256())
                     },
-                    AllowedScopes={ "tplApi_identity" }
+                    AllowedScopes={ "tplApi" }
                 }
             };
         }

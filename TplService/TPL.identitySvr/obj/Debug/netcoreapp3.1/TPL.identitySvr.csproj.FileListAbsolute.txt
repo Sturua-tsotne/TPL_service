@@ -18,3 +18,15 @@ C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\obj\D
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\obj\Debug\netcoreapp3.1\TPL.identitySvr.dll
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\obj\Debug\netcoreapp3.1\TPL.identitySvr.pdb
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\obj\Debug\netcoreapp3.1\TPL.identitySvr.genruntimeconfig.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\TPL.identitySvr\obj\Debug\netcoreapp3.1\TPL.identitySvr.csproj.CopyComplete

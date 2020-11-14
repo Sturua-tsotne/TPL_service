@@ -31,16 +31,14 @@ namespace Tpl.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-
-
             services.AddAuthentication("Bearer")
-                .AddIdentityServerAuthentication(options =>
-                {
-                    options.Authority = "http://localhost:5000";
-                    options.RequireHttpsMetadata = false;
-                    options.ApiName = "tpl";
+               .AddIdentityServerAuthentication(options =>
+               {
+                   options.Authority = "http://localhost:5000";
+                   options.RequireHttpsMetadata = false;
+                   options.ApiName = "tpl";
 
-                });
+               });
 
 
             services.AddDbContext<TPLContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TPLconnection")));

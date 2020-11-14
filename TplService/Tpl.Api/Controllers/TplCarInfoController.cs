@@ -12,10 +12,10 @@ using Tpl.Api.service.TPLService;
 
 namespace Tpl.Api.Controllers
 {
-    [Authorize]
+    
     [ApiController]
     [Route("api/[controller]")]
-   
+    [Authorize]
     public class TplCarInfoController : ControllerBase
     {
         private ITplCarInfoService _tplCarInfoService;
@@ -26,10 +26,10 @@ namespace Tpl.Api.Controllers
         }
 
         [HttpGet]
-        [Route("TplGetCarInff/{id}")]
-        public bool TplGetCarInff(int id)
+        [Route("Get")]
+        public IActionResult Get()
         {
-            return true;
+            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
         }
 
 
