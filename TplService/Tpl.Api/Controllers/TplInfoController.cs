@@ -22,7 +22,7 @@ namespace Tpl.Api.Controllers
 
         [HttpGet]
         [Route("TplGetInfo/{id}")]
-        public IEnumerable<TplInfoRequestModel> TplGetInfo(int id)
+        public TplInfoRequestModel  TplGetInfo(int id)
         {
             return null;
         }

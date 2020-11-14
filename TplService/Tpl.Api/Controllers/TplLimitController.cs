@@ -18,7 +18,7 @@ namespace Tpl.Api.Controllers
 
         [HttpGet]
         [Route("TplGetLimit/{id}")]
-        public IEnumerable<TolLimitViewModel> TplGetLimit(int id)
+        public TolLimitViewModel TplGetLimit(int id)
         {
             return null;
         }
