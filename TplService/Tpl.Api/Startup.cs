@@ -30,6 +30,19 @@ namespace Tpl.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "tpl";
+
+                });
+
+
             services.AddDbContext<TPLContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TPLconnection")));
             services.AddSwaggerGen(c =>
             {
@@ -56,6 +69,8 @@ namespace Tpl.Api
 
             app.UseRouting();
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

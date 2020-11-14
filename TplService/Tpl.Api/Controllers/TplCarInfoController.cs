@@ -13,6 +13,7 @@ using Tpl.Api.service.TPLService;
 namespace Tpl.Api.Controllers
 {
     [Authorize]
+    [ApiController]
     [Route("api/[controller]")]
    
     public class TplCarInfoController : ControllerBase

@@ -69,3 +69,7 @@ C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\net
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Serilog.dll
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
 C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

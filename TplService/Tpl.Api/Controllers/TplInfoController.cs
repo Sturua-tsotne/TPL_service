@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ using Tpl.Api.service.ITPLService;
 
 namespace Tpl.Api.Controllers
 {
+    [Authorize]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class TplInfoController : ControllerBase

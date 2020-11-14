@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Tpl.Api.Models.view_Models;
 using Tpl.Api.service.ITPLService;
@@ -6,8 +7,10 @@ using Tpl.Api.service.TPLService;
 
 namespace Tpl.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
+    [Route("api/[controller]")]
+  
     public class TplLimitController : ControllerBase
     {
         private ITplLimitService _tplLimitService;
