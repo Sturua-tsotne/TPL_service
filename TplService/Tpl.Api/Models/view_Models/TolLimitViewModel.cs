@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tpl.Api.Models.Db_Models
+namespace Tpl.Api.Models.view_Models
 {
-    public class TplImit
+    public class TolLimitViewModel
     {
         public int Id { get; set; }
         [Required]
@@ -15,7 +15,5 @@ namespace Tpl.Api.Models.Db_Models
         [Required]
         [StringLength(50)]
         public string Bonus { get; set; }
-
-        
     }
 }

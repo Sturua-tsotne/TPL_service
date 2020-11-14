@@ -34,7 +34,7 @@ namespace Tpl.Api.Models
          public virtual DbSet<CarModel> CarModels { get; set; }
          public virtual DbSet<CarFeature> CarFeatures { get; set; }
          public virtual DbSet<PersonalInformation> PersonalInformations { get; set; }
-         public virtual DbSet<TplImit> TplConditions { get; set; }
+         public virtual DbSet<TplLimit> TplConditions { get; set; }
 
     }
 }

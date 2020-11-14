@@ -13,7 +13,7 @@ namespace Tpl.Api.Models.Db_Models
         {
             CarFeatures = new HashSet<CarFeature>();
             PersonalInformations= new HashSet<PersonalInformation>();
-            TplImits = new HashSet<TplImit>();
+            TplImits = new HashSet<TplLimit>();
         }
 
 
@@ -31,6 +31,6 @@ namespace Tpl.Api.Models.Db_Models
 
         public virtual ICollection<CarFeature> CarFeatures { get; set; }
         public virtual ICollection<PersonalInformation> PersonalInformations { get; set; }
-        public virtual ICollection<TplImit> TplImits { get; set; }
+        public virtual ICollection<TplLimit> TplImits { get; set; }
     }
 }

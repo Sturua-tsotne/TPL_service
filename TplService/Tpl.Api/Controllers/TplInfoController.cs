@@ -15,14 +15,14 @@ namespace Tpl.Api.Controllers
     {
         [HttpGet]
         [Route("TplGetInfo")]
-        public IEnumerable<TplInfoRequestViewModel> TplGetInfo()
+        public IEnumerable<TplInfoRequestModel> TplGetInfo()
         {
             return null;
         }
 
         [HttpGet]
-        [Route("TplGetInfo/{carId}")]
-        public IEnumerable<TplInfoRequestViewModel> TplGetInfo(int id)
+        [Route("TplGetInfo/{id}")]
+        public IEnumerable<TplInfoRequestModel> TplGetInfo(int id)
         {
             return null;
         }
@@ -32,16 +32,22 @@ namespace Tpl.Api.Controllers
         {
             return true;
         }
-
-        [HttpDelete]
-        [Route("TplDeleteInfo/{carId}")]
-        public bool TplDeleteInfo(int id)
+        [HttpPost("TpEditInfo")]
+        public bool TplEditInfo(TplInfoResponseModel Tpl)
         {
             return true;
         }
 
+
         [HttpPost("TplChangeStatus")]
         public bool TplChangeStatus(int id, bool status)
+        {
+            return true;
+        }
+
+        [HttpDelete]
+        [Route("TplDeleteInfo/{id}")]
+        public bool TplDeleteInfo(int id)
         {
             return true;
         }
