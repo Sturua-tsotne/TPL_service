@@ -1,0 +1,5 @@
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.csprojAssemblyReference.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.AssemblyInfoInputs.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.AssemblyInfo.cs
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.csproj.CoreCompileInputs.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.Api\obj\Debug\netcoreapp3.1\Tpl.Api.MvcApplicationPartsAssemblyInfo.cache
