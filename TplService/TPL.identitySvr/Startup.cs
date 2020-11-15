@@ -12,23 +12,28 @@ namespace TPL.identitySvr
 {
     public class Startup
     {
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors(options =>
+            {
+             
+                options.AddPolicy("default", builder => builder
+                   .WithOrigins("<http://localhost:8081/>", "<http://localhost:8081>")
+                      .AllowAnyMethod()
+                         .AllowAnyHeader()
+                               .AllowCredentials()
+                 );
+            });
 
             services.AddIdentityServer()
              .AddDeveloperSigningCredential()
              .AddInMemoryApiScopes(Config.GetApiScopes())
-             .AddInMemoryApiResources(Config.GetAllApiResources())
-             .AddInMemoryClients(Config.GetClients())
-            .AddTestUsers(Config.GetUser());
+             .AddInMemoryApiResources(Config.GetAllApi())
+             .AddInMemoryClients(Config.GetClients());
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -38,14 +43,8 @@ namespace TPL.identitySvr
 
             app.UseRouting();
             app.UseIdentityServer();
+            app.UseCors("default");
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    //endpoints.MapGet("/", async context =>
-            //    //{
-            //    //    await context.Response.WriteAsync("Hello World!");
-            //    //});
-            //});
         }
     }
 }
