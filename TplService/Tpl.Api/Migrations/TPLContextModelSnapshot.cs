@@ -19,21 +19,6 @@ namespace Tpl.Api.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("CarManufacturerCarModel", b =>
-                {
-                    b.Property<int>("CarManufacturersId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CarModelsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CarManufacturersId", "CarModelsId");
-
-                    b.HasIndex("CarModelsId");
-
-                    b.ToTable("CarManufacturerCarModel");
-                });
-
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarFeature", b =>
                 {
                     b.Property<int>("Id")
@@ -77,6 +62,21 @@ namespace Tpl.Api.Migrations
                     b.ToTable("CarManufacturers");
                 });
 
+            modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarManufacturerCarModel", b =>
+                {
+                    b.Property<int>("CarManufacturersId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarModelsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CarManufacturersId", "CarModelsId");
+
+                    b.HasIndex(new[] { "CarModelsId" }, "IX_CarManufacturerCarModel_CarModelsId");
+
+                    b.ToTable("CarManufacturerCarModel");
+                });
+
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarModel", b =>
                 {
                     b.Property<int>("Id")
@@ -84,7 +84,7 @@ namespace Tpl.Api.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CarFeatureId")
+                    b.Property<int>("CarFeatureId")
                         .HasColumnType("int");
 
                     b.Property<int>("CarManufacturerId")
@@ -97,7 +97,7 @@ namespace Tpl.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarFeatureId");
+                    b.HasIndex(new[] { "CarFeatureId" }, "IX_CarModels_CarFeatureId");
 
                     b.ToTable("CarModels");
                 });
@@ -166,12 +166,12 @@ namespace Tpl.Api.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("TplModelId")
+                    b.Property<int>("TplModelId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TplModelId");
+                    b.HasIndex(new[] { "TplModelId" }, "IX_TplLimits_TplModelId");
 
                     b.ToTable("TplLimits");
                 });
@@ -183,13 +183,13 @@ namespace Tpl.Api.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CarFeatureId")
+                    b.Property<int>("CarFeatureId")
                         .HasColumnType("int");
 
                     b.Property<int>("ClientId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PersonalInformationId")
+                    b.Property<int>("PersonalInformationId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Status")
@@ -200,51 +200,71 @@ namespace Tpl.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarFeatureId");
+                    b.HasIndex(new[] { "CarFeatureId" }, "IX_TplModels_CarFeatureId");
 
-                    b.HasIndex("PersonalInformationId");
+                    b.HasIndex(new[] { "PersonalInformationId" }, "IX_TplModels_PersonalInformationId");
 
                     b.ToTable("TplModels");
                 });
 
-            modelBuilder.Entity("CarManufacturerCarModel", b =>
+            modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarManufacturerCarModel", b =>
                 {
-                    b.HasOne("Tpl.Api.Models.Db_Models.CarManufacturer", null)
-                        .WithMany()
+                    b.HasOne("Tpl.Api.Models.Db_Models.CarManufacturer", "CarManufacturers")
+                        .WithMany("CarManufacturerCarModels")
                         .HasForeignKey("CarManufacturersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Tpl.Api.Models.Db_Models.CarModel", null)
-                        .WithMany()
+                    b.HasOne("Tpl.Api.Models.Db_Models.CarModel", "CarModels")
+                        .WithMany("CarManufacturerCarModels")
                         .HasForeignKey("CarModelsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("CarManufacturers");
+
+                    b.Navigation("CarModels");
                 });
 
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarModel", b =>
                 {
-                    b.HasOne("Tpl.Api.Models.Db_Models.CarFeature", null)
+                    b.HasOne("Tpl.Api.Models.Db_Models.CarFeature", "CarFeature")
                         .WithMany("CarModels")
-                        .HasForeignKey("CarFeatureId");
+                        .HasForeignKey("CarFeatureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CarFeature");
                 });
 
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.TplLimit", b =>
                 {
-                    b.HasOne("Tpl.Api.Models.Db_Models.TplModel", null)
-                        .WithMany("TplImits")
-                        .HasForeignKey("TplModelId");
+                    b.HasOne("Tpl.Api.Models.Db_Models.TplModel", "TplModel")
+                        .WithMany("TplLimits")
+                        .HasForeignKey("TplModelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TplModel");
                 });
 
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.TplModel", b =>
                 {
-                    b.HasOne("Tpl.Api.Models.Db_Models.CarFeature", null)
+                    b.HasOne("Tpl.Api.Models.Db_Models.CarFeature", "CarFeature")
                         .WithMany("TplModels")
-                        .HasForeignKey("CarFeatureId");
+                        .HasForeignKey("CarFeatureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Tpl.Api.Models.Db_Models.PersonalInformation", null)
+                    b.HasOne("Tpl.Api.Models.Db_Models.PersonalInformation", "PersonalInformation")
                         .WithMany("TplModels")
-                        .HasForeignKey("PersonalInformationId");
+                        .HasForeignKey("PersonalInformationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CarFeature");
+
+                    b.Navigation("PersonalInformation");
                 });
 
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarFeature", b =>
@@ -254,6 +274,16 @@ namespace Tpl.Api.Migrations
                     b.Navigation("TplModels");
                 });
 
+            modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarManufacturer", b =>
+                {
+                    b.Navigation("CarManufacturerCarModels");
+                });
+
+            modelBuilder.Entity("Tpl.Api.Models.Db_Models.CarModel", b =>
+                {
+                    b.Navigation("CarManufacturerCarModels");
+                });
+
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.PersonalInformation", b =>
                 {
                     b.Navigation("TplModels");
@@ -261,7 +291,7 @@ namespace Tpl.Api.Migrations
 
             modelBuilder.Entity("Tpl.Api.Models.Db_Models.TplModel", b =>
                 {
-                    b.Navigation("TplImits");
+                    b.Navigation("TplLimits");
                 });
 #pragma warning restore 612, 618
         }

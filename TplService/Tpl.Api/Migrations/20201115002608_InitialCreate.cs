@@ -64,7 +64,7 @@ namespace Tpl.Api.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Model = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CarManufacturerId = table.Column<int>(type: "int", nullable: false),
-                    CarFeatureId = table.Column<int>(type: "int", nullable: true)
+                    CarFeatureId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -74,7 +74,7 @@ namespace Tpl.Api.Migrations
                         column: x => x.CarFeatureId,
                         principalTable: "CarFeatures",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -86,8 +86,8 @@ namespace Tpl.Api.Migrations
                     ClientId = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false),
                     TplImitId = table.Column<int>(type: "int", nullable: false),
-                    CarFeatureId = table.Column<int>(type: "int", nullable: true),
-                    PersonalInformationId = table.Column<int>(type: "int", nullable: true)
+                    CarFeatureId = table.Column<int>(type: "int", nullable: false),
+                    PersonalInformationId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -97,13 +97,13 @@ namespace Tpl.Api.Migrations
                         column: x => x.CarFeatureId,
                         principalTable: "CarFeatures",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TplModels_PersonalInformations_PersonalInformationId",
                         column: x => x.PersonalInformationId,
                         principalTable: "PersonalInformations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -138,7 +138,7 @@ namespace Tpl.Api.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Limit = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Bonus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    TplModelId = table.Column<int>(type: "int", nullable: true)
+                    TplModelId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -148,7 +148,7 @@ namespace Tpl.Api.Migrations
                         column: x => x.TplModelId,
                         principalTable: "TplModels",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
