@@ -12,15 +12,20 @@ namespace TPL.identitySvr
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddIdentityServer()
              .AddDeveloperSigningCredential()
              .AddInMemoryApiScopes(Config.GetApiScopes())
              .AddInMemoryApiResources(Config.GetAllApiResources())
-             .AddInMemoryClients(Config.GetClients());
+             .AddInMemoryClients(Config.GetClients())
+            .AddTestUsers(Config.GetUser());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

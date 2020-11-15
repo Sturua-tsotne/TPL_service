@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Tpl.Api.Models.view_Models;
 using Tpl.Api.service.ITPLService;
-using Tpl.Api.service.TPLService;
 
 namespace Tpl.Api.Controllers
 {

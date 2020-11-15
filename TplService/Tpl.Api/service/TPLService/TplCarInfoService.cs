@@ -26,7 +26,7 @@ namespace Tpl.Api.service.TPLService
                 {
                     Manufacturer = x.Manufacturer,
                     Id = x.Id,
-                    //CarModels = x.CarModels.Where(a => a.CarManufacturerId == x.Id).ToList()
+                    CarModels = _Context.CarModels.Where(a => a.CarManufacturerId == x.Id).ToList()
 
                 }).ToList();
 
@@ -51,7 +51,7 @@ namespace Tpl.Api.service.TPLService
                     {
                         Manufacturer = carinfo.Manufacturer,
                         Id = carinfo.Id,
-                       // CarModels = carinfo.CarModels.Where(a => a.CarManufacturerId == carinfo.Id).ToList()
+                        CarModels =  _Context.CarModels.Where(a => a.CarManufacturerId == carinfo.Id).ToList()
 
                     };
                 }

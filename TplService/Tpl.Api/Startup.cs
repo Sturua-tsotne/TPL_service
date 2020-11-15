@@ -24,7 +24,7 @@ namespace Tpl.Api
         {
             Configuration = configuration;
         }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -36,11 +36,22 @@ namespace Tpl.Api
                {
                    options.Authority = "http://localhost:5000";
                    options.RequireHttpsMetadata = false;
-                   options.ApiName = "tpl";
+                   options.ApiName = "tplApi";
 
                });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                              builder =>
+                              {
+                                  builder
+                                  .AllowAnyHeader()
+                                  .AllowAnyOrigin()
+                                  .AllowAnyMethod();
 
+                              });
+            });
             services.AddDbContext<TPLContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TPLconnection")));
             services.AddSwaggerGen(c =>
             {

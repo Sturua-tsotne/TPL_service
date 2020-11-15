@@ -1,0 +1,16 @@
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Tpl.IdentityModel.exe
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Tpl.IdentityModel.deps.json
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Tpl.IdentityModel.runtimeconfig.json
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Tpl.IdentityModel.runtimeconfig.dev.json
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Tpl.IdentityModel.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Tpl.IdentityModel.pdb
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.csprojAssemblyReference.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.AssemblyInfoInputs.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.AssemblyInfo.cs
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.csproj.CoreCompileInputs.cache
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.csproj.CopyComplete
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.dll
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.pdb
+C:\Users\tsotne\Desktop\TPL_Service\TPL_service\TplService\Tpl.IdentityModel\obj\Debug\netcoreapp3.1\Tpl.IdentityModel.genruntimeconfig.cache

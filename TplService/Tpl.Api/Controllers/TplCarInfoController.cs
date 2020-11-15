@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using IdentityModel.Client;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -19,6 +20,7 @@ namespace Tpl.Api.Controllers
     public class TplCarInfoController : ControllerBase
     {
         private ITplCarInfoService _tplCarInfoService;
+        private object disco;
 
         public TplCarInfoController(TplCarInfoService tplCarInfoService)
         {
@@ -29,6 +31,7 @@ namespace Tpl.Api.Controllers
         [Route("Get")]
         public IActionResult Get()
         {
+           
             return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
         }
 
