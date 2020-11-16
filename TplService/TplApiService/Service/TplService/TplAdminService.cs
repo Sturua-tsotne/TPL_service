@@ -15,7 +15,7 @@ namespace TplApiService.Service.TplService
     {
         private ILog _Log;
         public TplAdminService(TPLContext Context, ILog log)
-      : base(Context)
+        : base(Context)
         {
             _Log = log;
         }
